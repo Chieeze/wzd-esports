@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar" class="js-sidebar">
+            <!-- Content For Sidebar -->
+            <div class="h-100">
+                <div class="sidebar-logo">
+                    <a href="#">Wolvezden</a>
+                </div>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header">
+                        Admin Elements
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link" onclick="scrollToDashboard()">
+                            <i class="fa-solid fa-list pe-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-file-lines pe-2"></i>
+                            Pages
+                        </a>
+                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Home</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">News</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#products" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-shopping-bag pe-2"></i>
+                            Products
+                        </a>
+                        <ul id="products" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link" id="addProductLink">Add Product</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link" id="viewProductsLink">View Products</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
+                            Posts
+                        </a>
+                        <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 1</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 2</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-regular fa-user pe-2"></i>
+                            Auth
+                        </a>
+                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Login</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Register</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Forgot Password</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                <img src="assets/images/profile2.png" class="avatar img-fluid rounded" alt="">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a href="#" class="dropdown-item">Profile</a>
+                                <a href="#" class="dropdown-item">Setting</a>
+                                <a href="login.html" class="dropdown-item">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="content px-3 py-2">
+                <div class="container-fluid" id="mainContent">
+                    <div class="mb-3">
+                        <h4>Admin Dashboard</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 d-flex">
+                            <div class="card flex-fill border-0 illustration">
+                                <div class="card-body p-0 d-flex flex-fill">
+                                    <div class="row g-0 w-100">
+                                        <div class="col-6">
+                                            <div class="p-3 m-1">
+                                                <h4>Welcome Back, Admin</h4>
+                                                <p class="mb-0">Admin Dashboard, Wolvezden</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 align-self-end text-end">
+                                            <img src="image/customer-support.jpg" class="img-fluid illustration-img"
+                                                alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 d-flex">
+                            <div class="card flex-fill border-0">
+                                <div class="card-body py-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h4 class="mb-2">
+                                                $ 78.00
+                                            </h4>
+                                            <p class="mb-2">
+                                                Total Earnings
+                                            </p>
+                                            <div class="mb-0">
+                                                <span class="badge text-success me-2">
+                                                    +9.0%
+                                                </span>
+                                                <span class="text-muted">
+                                                    Since Last Month
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0" id="dashboardTable"> <!-- This is the basic table -->
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            View Products
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Product Name</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productList"> <!-- This is where new product rows will be appended -->
+                                <!-- Existing products will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Product Form -->
+                <div class="container-fluid" id="productForm" style="display: none;">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card border-0">
+                                <div class="card-header">
+                                    <h5 class="card-title">
+                                        Add Product
+                                    </h5>
+                                    <h6 class="card-subtitle text-muted">
+                                        Please fill out the form below to add a new product.
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="productName" class="form-label">Product Name</label>
+                                            <input type="text" class="form-control" id="productName"
+                                                placeholder="Enter product name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="productDescription" class="form-label">Description</label>
+                                            <textarea class="form-control" id="productDescription" rows="3"
+                                                placeholder="Enter product description"></textarea>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="productPrice" class="form-label">Price</label>
+                                            <input type="text" class="form-control" id="productPrice"
+                                                placeholder="Enter product price">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="productImage" class="form-label">Product Image</label>
+                                            <input type="file" class="form-control" id="productImage">
+                                        </div>
+                                        <button type="submit" id="submitProduct" class="btn btn-primary">Submit</button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Product Form -->
+            </main>
+            <a href="#" class="theme-toggle">
+                <i class="fa-regular fa-moon"></i>
+                <i class="fa-regular fa-sun"></i>
+            </a>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row text-muted">
+                        <div class="col-6 text-start">
+                            <p class="mb-0">
+                                <a href="#" class="text-muted">
+                                    <strong>Wolvezden</strong>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-6 text-end">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-muted">Contact</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-muted">About Us</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-muted">Terms</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-muted">Booking</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Function to show Add Product form when Add Product link is clicked
+        document.getElementById('addProductLink').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default link behavior
+            document.getElementById('mainContent').style.display = 'none';
+            document.getElementById('dashboardTable').style.display = 'none'; // Hide the basic table
+            document.getElementById('productForm').style.display = 'block';
+        });
+        
+        // Function to handle click event on View Products link
+        document.getElementById('viewProductsLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+    
+            // Hide other sections if needed
+            document.getElementById('mainContent').style.display = 'none';
+            document.getElementById('productForm').style.display = 'none';
+    
+            // Show the product list section
+            document.getElementById('dashboardTable').style.display = 'block';
+        });
+    
+        // Function to handle form submission
+        document.getElementById('productForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            // Get values from the form
+            var productName = document.getElementById('productName').value;
+            var productDescription = document.getElementById('productDescription').value;
+            var productPrice = document.getElementById('productPrice').value;
+    
+            // Create HTML for the new product
+            var productHTML = `
+                <tr>
+                    <th scope="row">1</th>
+                    <td>${productName}</td>
+                    <td>${productDescription}</td>
+                    <td>${productPrice}</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" onclick="editProduct(this)">Edit</button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteProduct(this)">Delete</button>
+                    </td>
+                </tr>
+            `;
+    
+            // Append the new product to the productList in shop.html
+            var productList = document.getElementById('productList');
+            productList.innerHTML += productHTML;
+    
+            // Clear the form fields
+            document.getElementById('productName').value = '';
+            document.getElementById('productDescription').value = '';
+            document.getElementById('productPrice').value = '';
+    
+            // Hide the product form
+            document.getElementById('productForm').style.display = 'none';
+    
+            // Show the main content
+            document.getElementById('mainContent').style.display = 'block';
+        });
+
+        // Function to handle editing a product
+        function editProduct(btn) {
+            // Implement your edit logic here
+            var row = btn.closest('tr');
+            var productName = row.cells[1].innerText;
+            var productDescription = row.cells[2].innerText;
+            var productPrice = row.cells[3].innerText;
+
+            // Example: Outputting the product details to console
+            console.log('Editing Product:');
+            console.log('Name:', productName);
+            console.log('Description:', productDescription);
+            console.log('Price:', productPrice);
+        }
+
+        // Function to handle deleting a product
+        function deleteProduct(btn) {
+            // Implement your delete logic here
+            var row = btn.closest('tr');
+            row.remove();
+
+            // Example: Outputting the deleted product to console
+            console.log('Deleting Product:', row.cells[1].innerText);
+        }
+    </script>
+</body>
+
+</html>
